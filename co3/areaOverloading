@@ -1,0 +1,56 @@
+package overload_shape;
+import java.util.Scanner;
+
+
+class Overload 
+{
+public float area(float x)
+{
+   return x*x;
+}
+public void area(float x,float y)
+{
+    System.out.println("area of rectangle is:" +(x*y));
+}
+public void area(double r)
+{
+    double area;
+    area=2*Math.PI*r;
+    System.out.println("area of circle is:" +area);
+}
+public void area(float a,float b,float c)
+    {
+        double s=(a+b+c)/2;
+        double tri;
+        tri = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        System.out.println("area of square is"+tri);
+    }
+}
+public class Overload_shape 
+{
+    public static void main(String[] args) 
+    {
+        float l,b,s;
+        double r;
+        
+        Scanner sc=new Scanner(System.in);
+        Overload s1=new Overload();
+        
+        System.out.println("enter the side of square");
+        s=sc.nextFloat();
+        
+         System.out.println("enter the length and breadth of rectangle");
+         l=sc.nextFloat();
+         b=sc.nextFloat();
+         
+        System.out.println("enter the radius of cicrle");
+        r=sc.nextDouble();
+        
+        float ans=s1.area(s);
+        System.err.println("area of square is:"+ans);
+        s1.area(l,b);
+        s1.area(r);
+        s1.area(l,b,s);
+
+    }
+}
