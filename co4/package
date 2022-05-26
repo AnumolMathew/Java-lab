@@ -1,0 +1,104 @@
+1 Create a Graphics package that has classes and interfaces for figures Rectangle, Triangle,
+Square and Circle. Test the package by finding the area of these figures.
+
+graphics.java
+ 
+ 
+package graphics;
+ 
+ 
+import java.util.Scanner;
+public class Graphics {
+ 
+    
+    public static void main(String[] args) {
+    
+       double l,b,b1,h,r,a;
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter the the length and bredath of rectangle");
+       l=sc.nextDouble();
+       b=sc.nextDouble();
+       
+       System.out.println("Enter the the base and height of triangle");
+       b1=sc.nextDouble();
+       h=sc.nextDouble();
+       
+       System.out.println("Enter the the side square");
+       a=sc.nextDouble();
+       
+       System.out.println("Enter the the radius of circle");
+       r=sc.nextDouble();
+       
+       
+       Rectangle r1=new Rectangle();
+       r1.area(l, b);
+       
+       Triangle t1=new Triangle();
+       t1.area(b, h);
+       
+       Square s1=new Square();
+       s1.area(a);
+       
+       Circle c1=new Circle();
+       c1.area(r);
+       
+       
+    }
+    
+}
+ 
+ 
+ 
+Triangle.java
+ 
+package graphics;
+ 
+public class Triangle {
+     public void area(double b,double h){
+        System.out.println("Area of triangle:"+((b*h)/2));
+    }
+    
+}
+ 
+rectangle.java
+package graphics;
+ 
+ 
+public class rectangle 
+{
+    
+    public void area(double l,double b)
+    {
+        System.out.println("area of rectangle:"+(l*b));
+    }
+}
+ 
+ 
+circle.java
+ 
+package graphics;
+ 
+ 
+public class circle 
+{
+    
+    public void area(double r)
+    {
+        double pi=3.14;
+        System.out.println("area of circle:"+(r*r*pi));
+    }
+}
+ 
+square.java
+package graphics;
+ 
+ 
+public class square 
+{
+    
+    public void area(double s)
+    {
+        System.out.println("area of square:"+(s*s));
+    }
+}
+ 
